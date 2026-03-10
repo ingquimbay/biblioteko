@@ -1,0 +1,3 @@
+2026-03-10 14:10:08.227044-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKS" not found; SQL statement:
+select b1_0.id,b1_0.author,b1_0.genre,b1_0.pages,b1_0.published_year,b1_0.title from books b1_0 [42102-240]

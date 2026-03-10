@@ -16,7 +16,11 @@ function BookGalleryComponent() {
             <h2>Library Books</h2>
             <ul>
                 {books.map(book => (
-                    <li key={book.id}>{book.title} - {book.author}</li>
+                    <div key={book.id} className="book-card">
+                        <li>{book.title} - {book.author} | 
+                            <a href={`/books/${book.id}`}> View Details</a>
+                        </li>
+                    </div>
                 ))}
             </ul>
         </div>

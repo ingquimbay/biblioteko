@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import BookGalleryComponent from './BookGalleryComponent';
 import BookDetailComponent from './BookDetailComponent';
+import BookSubmissionComponent from './BookSumissionComponent';
 
 function App() {
 
@@ -19,6 +20,8 @@ function App() {
             <Route path="/" element={<BookGalleryComponent />} />
 
             <Route path="/books/:id" element={<BookDetailComponent />} />
+
+            <Route path="/add-book" element={<BookSubmissionComponent />} />
 
           </Routes>
         </div>

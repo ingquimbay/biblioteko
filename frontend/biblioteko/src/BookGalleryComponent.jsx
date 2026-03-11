@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function BookGalleryComponent() {
     const [books, setBooks] = useState([]);
@@ -12,17 +13,22 @@ function BookGalleryComponent() {
     }, []);
 
     return (
-        <div>
+        <div className="container">
             <h2>Library Books</h2>
-            <ul>
+            <table className='book-table'>
                 {books.map(book => (
-                    <div key={book.id} className="book-card">
-                        <li>{book.title} - {book.author} | 
-                            <a href={`/books/${book.id}`}> View Details</a>
-                        </li>
-                    </div>
+                    <tr key={book.id} className="book-card">
+                        <td>{book.title} </td>
+                        <td> {book.author}</td>
+                        <td><Link to={`/books/${book.id}`}> View Details</Link></td>
+                    </tr>
                 ))}
-            </ul>
+            </table>
+            <div className='footer-actions'>
+                <Link to="/add-book" className='add-btn'>
+                    Add New Book
+                </Link>
+            </div>
         </div>
     );
 }

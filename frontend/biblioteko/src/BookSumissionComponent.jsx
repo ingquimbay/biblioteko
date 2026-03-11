@@ -39,14 +39,14 @@ function BookSubmissionComponent() {
     return (
         <div style={{ maxWidth: '400px', margin: '20px auto' }}>
             <h2>Add New Book</h2>
-            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                <input name="title" placeholder="Title" onChange={handleChange} required />
-                <input name="author" placeholder="Author" onChange={handleChange} required />
-                <input name="genre" placeholder="Genre" onChange={handleChange} />
-                <input name="pages" placeholder="Pages" onChange={handleChange} type="number" />
-                <input name="publishedYear" placeholder="Published Year" onChange={handleChange} type="number" />
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }} className='form-container'>
+                <input name="title" placeholder="Title" className='form-input' onChange={handleChange} required />
+                <input name="author" placeholder="Author" className='form-input' onChange={handleChange} required />
+                <input name="genre" placeholder="Genre" className='form-input' onChange={handleChange} />
+                <input name="pages" placeholder="Pages" className='form-input' onChange={handleChange} type="number" />
+                <input name="publishedYear" placeholder="Published Year" className='form-input' onChange={handleChange} type="number" />
 
-                <button type="submit" style={{ padding: '10px', background: '#28a745', color: 'white', border: 'none' }}>
+                <button type="submit" style={{ padding: '10px', background: '#28a745', color: 'white', border: 'none' }} className='form-input'>
                     Submit Book
                 </button>
                 <button type="button" onClick={() => navigate('/')}>Cancel</button>
